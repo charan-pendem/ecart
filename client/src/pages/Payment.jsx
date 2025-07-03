@@ -16,7 +16,7 @@ function Payment() {
   }, []);
 
   const fetchCartItems = () => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/cart`, {
+    fetch(`${import.meta.env.VITE_API_URL} https://ecart-nv2f.onrender.com/api/cart`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     })
@@ -28,7 +28,7 @@ function Payment() {
   };
 
   const fetchUserAddress = () => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/users/profile`, {
+    fetch(`${import.meta.env.VITE_API_URL} https://ecart-nv2f.onrender.com/api/users/profile`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     })
@@ -76,7 +76,7 @@ function Payment() {
       })),
     };
 
-    fetch(`${import.meta.env.VITE_API_URL}/api/orders`, {
+    fetch(`${import.meta.env.VITE_API_URL} https://ecart-nv2f.onrender.com/api/orders`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
