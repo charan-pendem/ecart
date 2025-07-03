@@ -57,7 +57,7 @@ function ProfilePage() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch(`${import.meta.env.VITE_API_URL}/api/users/profile`, {
+    fetch(`${import.meta.env.VITE_API_URL} https://ecart-nv2f.onrender.com/api/users/profile`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
