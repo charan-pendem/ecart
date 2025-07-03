@@ -21,7 +21,7 @@ function Cart() {
       return;
     }
 
-    fetch(`${import.meta.env.VITE_API_URL}/api/cart`, {
+    fetch(`${import.meta.env.VITE_API_URL} https://ecart-nv2f.onrender.com/api/cart`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     })
@@ -38,7 +38,7 @@ function Cart() {
 
   // Delete a single item from the cart
   const handleDeleteItem = (itemId) => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/cart/${itemId}`, {
+    fetch(`${import.meta.env.VITE_API_URL} https://ecart-nv2f.onrender.com/api/cart/${itemId}`, {
       method: "DELETE",
       headers: { Authorization: `Bearer ${token}` },
     })
@@ -55,7 +55,7 @@ function Cart() {
 
   // Clear all cart items
   const handleClearCart = () => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/cart`, {
+    fetch(`${import.meta.env.VITE_API_URL} https://ecart-nv2f.onrender.com/api/cart`, {
       method: "DELETE",
       headers: { Authorization: `Bearer ${token}` },
     })
