@@ -17,7 +17,7 @@ function ManageUsers() {
   }
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/users`, {
+    fetch(`https://ecart-nv2f.onrender.com/api/users`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
@@ -28,7 +28,7 @@ function ManageUsers() {
   }, [token]);
 
   const handleDeleteUser = (id) => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/users/${id}`, {
+    fetch(`https://ecart-nv2f.onrender.com/api/users/${id}`, {
       method: "DELETE",
       headers: { Authorization: `Bearer ${token}` },
     })
