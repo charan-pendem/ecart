@@ -11,7 +11,7 @@ function Product() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}https://ecart-nv2f.onrender.com/api/products/${id}`)
+    fetch(`https://ecart-nv2f.onrender.com/api/products/${id}`)
       .then((response) => response.json())
       .then((data) => setProduct(data))
       .catch(() => toast.error("Failed to load product"))
@@ -19,7 +19,7 @@ function Product() {
   }, [id]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL} https://ecart-nv2f.onrender.com/api/reviews/${id}`)
+    fetch(`https://ecart-nv2f.onrender.com/api/reviews/${id}`)
       .then((response) => response.json())
       .then((data) => setReviews(Array.isArray(data) ? data : []))
       .catch(() => toast.error("Failed to load reviews"));
@@ -34,7 +34,7 @@ function Product() {
     }
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL} https://ecart-nv2f.onrender.com/api/cart`, {
+      const response = await fetch(`https://ecart-nv2f.onrender.com/api/cart`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
