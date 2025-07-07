@@ -15,7 +15,7 @@ function Orders() {
   }, []);
 
   const fetchOrders = () => {
-    fetch(`${import.meta.env.VITE_API_URL}https://ecart-nv2f.onrender.com/api/orders/myorders`, {
+    fetch(`https://ecart-nv2f.onrender.com/api/orders/myorders`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
@@ -34,7 +34,7 @@ function Orders() {
       return;
     }
 
-    fetch(`${import.meta.env.VITE_API_URL}https://ecart-nv2f.onrender.com/api/reviews/${productId}`, {
+    fetch(`https://ecart-nv2f.onrender.com/api/reviews/${productId}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
