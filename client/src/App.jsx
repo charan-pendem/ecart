@@ -26,7 +26,7 @@ function App() {
 
     if (token) {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/users/profile`, {
+        const response = await fetch(`https://ecart-nv2f.onrender.com/api/users/profile`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
