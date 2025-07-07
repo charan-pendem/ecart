@@ -12,7 +12,7 @@ function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL} https://ecart-nv2f.onrender.com/api/products`)
+    fetch(`https://ecart-nv2f.onrender.com/api/products`)
       .then((response) => {
         if (!response.ok) throw new Error("Failed to load products");
         return response.json();
