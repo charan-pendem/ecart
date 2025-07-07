@@ -5,7 +5,7 @@ function ManageOrders() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/orders`, {
+    fetch(`https://ecart-nv2f.onrender.com/api/orders`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
@@ -25,7 +25,7 @@ function ManageOrders() {
       )
     );
 
-    fetch(`${import.meta.env.VITE_API_URL}/api/orders/${orderId}/status`, {
+    fetch(`https://ecart-nv2f.onrender.com/api/orders/${orderId}/status`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
