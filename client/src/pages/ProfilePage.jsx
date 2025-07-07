@@ -19,7 +19,7 @@ function ProfilePage() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL} https://ecart-nv2f.onrender.com/api/users/profile`, {
+    fetch(`https://ecart-nv2f.onrender.com/api/users/profile`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
@@ -57,7 +57,7 @@ function ProfilePage() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch(`${import.meta.env.VITE_API_URL} https://ecart-nv2f.onrender.com/api/users/profile`, {
+    fetch(`https://ecart-nv2f.onrender.com/api/users/profile`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
