@@ -17,7 +17,7 @@ function ManageProducts() {
 
   // Fetch products from API
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/products`, {
+    fetch(`https://ecart-nv2f.onrender.com/api/products`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
@@ -38,7 +38,7 @@ function ManageProducts() {
   // Submit new product
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`${import.meta.env.VITE_API_URL}/api/products`, {
+    fetch(`https://ecart-nv2f.onrender.com/api/products`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -60,7 +60,7 @@ function ManageProducts() {
     const newStock = stockUpdates[productId];
     if (newStock === undefined || newStock === "") return;
 
-    fetch(`${import.meta.env.VITE_API_URL}/api/products/${productId}/stock`, {
+    fetch(`https://ecart-nv2f.onrender.com/api/products/${productId}/stock`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -81,7 +81,7 @@ function ManageProducts() {
   };
 
   const deleteProduct = (productId) => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/products/${productId}`, {
+    fetch(`https://ecart-nv2f.onrender.com/api/products/${productId}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,
